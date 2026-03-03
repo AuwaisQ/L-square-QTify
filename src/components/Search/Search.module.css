@@ -1,0 +1,47 @@
+.search {
+  background-color: white;
+  padding: 14px 20px;
+  border-color: black;
+  height: 33%;
+  border-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 2px solid black;
+  width: 100%;
+  max-width: 502px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  height: 48px;
+  width: 100%;
+  max-width: 550px;
+}
+
+.searchButton {
+  background-color: white;
+  border-radius: 0px 8px 8px 0px;
+  padding: 14px 20px;
+  height: 100%;
+  border-color: black;
+  border: 2px solid black;
+  border-left: none;
+  cursor: pointer;
+  height: 100%;
+}
+
+.listElement {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.albumTitle {
+  font-size: 16px;
+}
+
+.albumArtists {
+  font-size: 12px;
+}
