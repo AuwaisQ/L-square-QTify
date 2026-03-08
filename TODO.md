@@ -1,8 +1,8 @@
-# Fix Plan - 500 Internal Server Error
+# TODO - Add New Albums Section
 
-## Steps to Complete:
-- [x] 1. Fix src/Pages/Home/Home.jsx - Remove duplicate component declarations
-- [x] 2. Fix src/Pages/Albums/Albums.jsx - Rename export from Home to Albums
-- [x] 3. Fix src/components/AppRoutes/AppRoutes.jsx - Correct import paths
-- [x] 4. Test the application
+- [x] Plan the implementation
+- [x] Add state for new albums in Home.jsx
+- [x] Add useEffect to fetch from `${endpoint}/albums/new`
+- [x] Add Section component for "New Albums" below "Top Albums"
+- [ ] Test the implementation
 
