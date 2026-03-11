@@ -2,15 +2,25 @@
   padding: 20px 0;
 }
 
+.container {
+  padding: 20px;
+}
+
+.title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 17px !important;
+  font-family: "Poppins" !important;
+}
+
 .header {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding-left: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.divider{
+    background-color: var(--color-primary);
 }
 
 .collapseButton {
@@ -22,11 +32,31 @@
   font-size: 16px !important;
   text-transform: none !important;
   font-family: "Poppins" !important;
+  outline: none !important;
+}
+
+.collapseButton:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.collapseButton:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.collapseButton:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .collapseButton:hover {
   background-color: transparent !important;
   box-shadow: none;
+  border: none;
 }
 
 .swiperContainer {
@@ -88,4 +118,19 @@
 :global(.swiper-button-next svg),
 :global(.swiper-button-prev svg) {
   display: none !important;
+}
+
+.cardContainer {
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column !important;
+  gap: 6px;
+}
+
+.cardTitle {
+  color: white;
+  text-align: left;
+  font-size: 14px !important;
+  font-family: "Poppins" !important;
 }

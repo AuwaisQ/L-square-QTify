@@ -2,7 +2,7 @@ import Chip from '@mui/material/Chip';
 import styles from './Card.module.css';
 import { Box } from "@mui/material";
 
-export default function MediaCard({ album}) {
+export default function MediaCard({ album, isSong = false }) {
   return (
     <Box className={styles.container}>
       <Box className={styles["img-container"]}>
@@ -11,7 +11,7 @@ export default function MediaCard({ album}) {
 
       <Box className={styles["chip-container"]}>
         <Chip
-          label={`${album.follows} Follows`}
+          label={isSong ? `${album.likes} Likes` : `${album.follows} Follows`}
           style={{
             backgroundColor: "var(--color-black)",
             color: "white",

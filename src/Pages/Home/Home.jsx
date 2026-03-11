@@ -2,12 +2,15 @@
 import { useState, useEffect } from 'react';
 import Hero from '../../components/Hero/Hero';
 import Section from '../../components/Section/Section';
-import { Box } from '@mui/material';
+import { Box , Divider } from '@mui/material';
 import endpoint from '../../Api/endpoint';
+import styles from '../Home/Home.module.css';
 
 const Home = () => {
     const [albums, setAlbums] = useState([]);
     const [newAlbums, setNewAlbums] = useState([]);
+    const [songs, setSongs] = useState([]);
+    const [genres, setGenres] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -30,6 +33,24 @@ const Home = () => {
             .catch(err => {
                 console.error('Error fetching new albums:', err);
             });
+
+        fetch(`${endpoint}/songs`)
+            .then(res => res.json())
+            .then(data => {
+                setSongs(data);
+            })
+            .catch(err => {
+                console.error('Error fetching songs:', err);
+            });
+
+        fetch(`${endpoint}/genres`)
+            .then(res => res.json())
+            .then(data => {
+                setGenres(data.data);
+            })
+            .catch(err => {
+                console.error('Error fetching genres:', err);
+            });
     }, []);
     
     return (
@@ -43,9 +64,13 @@ const Home = () => {
                 <Box sx={{ display: 'flex', justifyContent: 'center', py: 4, color: 'white' }}>Loading...</Box>
             ) : (
                 <>
-                    <Section title="Top Albums" albums={albums} />
+                    <Section title="Top" albums={albums} />
                     <br />
-                    <Section title="New Albums" albums={newAlbums} />
+                    <Section title="New" albums={newAlbums} />
+                    <br />
+                    <Divider className={styles.divider} />
+                    <br />
+                    <Section title="Songs" albums={newAlbums} isSongs={true} data={songs} genres={genres} />
                 </>
             )}
         </Box>
