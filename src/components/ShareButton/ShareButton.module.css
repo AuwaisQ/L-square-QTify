@@ -6,8 +6,9 @@
     font-family: "Poppins", sans-serif;
     padding: 10px 16px;
     margin: 14px;
-    Width: 170px;
-    Height: 47px;
-    font-size:medium;
-
+    width: 170px;
+    height: 47px;
+    font-size: medium;
+    flex-shrink: 0;
+    box-sizing: border-box;
 }

@@ -6,7 +6,9 @@
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   border: 2px solid black;
-  width: 800px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
   box-sizing: border-box;
   height: 100%;
 }
@@ -15,7 +17,8 @@
   display: flex;
   align-items: stretch;
   height: 48px;
-  width: 850px;
+  flex: 1;
+  max-width: 70vw;
 }
 
 .searchButton {
