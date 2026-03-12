@@ -65,9 +65,9 @@ function Search({ searchData, placeholder }) {
     <div style={{ position: "relative" }}>
       <form
         className={styles.wrapper}
-        onSubmit={(e) => {
-          onSubmit(e, value);
-        }}
+        // onSubmit={(e) => {
+        //   onSubmit(e, value);
+        // }}
       >
         <div {...getRootProps()}>
           <input
@@ -84,7 +84,7 @@ function Search({ searchData, placeholder }) {
           </button>
         </div>
       </form>
-      {groupedOptions.length > 0 ? (
+      {/* {groupedOptions.length > 0 ? (
         <Listbox {...getListboxProps()}>
           {groupedOptions.map((option, index) => {
             // console.log(option);
@@ -109,7 +109,7 @@ function Search({ searchData, placeholder }) {
             );
           })}
         </Listbox>
-      ) : null}
+      ) : null} */}
     </div>
   );
 }
