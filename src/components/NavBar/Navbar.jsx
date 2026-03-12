@@ -7,7 +7,7 @@ import styles from "./Navbar.module.css";
 
 function Navbar({ searchData }) {
   return (
-    <nav className={styles.navbar}>
+<nav className={styles.navbar} data-testid="navbar-container">
       <Link to="/">
         <Logo />
       </Link>

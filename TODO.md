@@ -1,16 +1,10 @@
-# TODO - Fetch Songs and Genres from APIs
+# Navbar Test Case 1 Fix Plan
 
-## Plan
-- [x] 1. Update Home.jsx - Add state for songs and genres, fetch from APIs
-- [x] 2. Update Carousel.jsx - Fix prop name from `generes` to `genres`
-- [x] 3. Fix Section.jsx - Fix prop name from `generes` to `genres`
-- [x] 4. Fix MUI version mismatch (@mui/material@7.3.8, @mui/lab@7.0.1-beta.23)
+## Steps:
+- [x] Step 1: Update src/App.jsx to fetch songs data and pass as searchData prop to Navbar
+- [x] Step 2: Update src/components/NavBar/Navbar.jsx to add data-testid=\"navbar-container\" to nav element
+- [ ] Step 3: Verify Cypress test passes
+- [ ] Step 4: Complete task
 
-## Completed
-- [x] Analyze codebase structure
-- [x] Get user confirmation
-- [x] Implement songs and genres API fetching
-- [x] Fix prop name consistency across components
-- [x] Fix MUI version mismatch causing Vercel build error
-- [x] Verify build passes
+Current progress: Steps 1-2 complete. Code now aligns with test expectations (logo img, input, Give Feedback button in navbar container).
 
